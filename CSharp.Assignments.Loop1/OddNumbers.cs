@@ -13,9 +13,16 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             Console.Error.WriteLine("Enter the starting number");
+            int n = int.Parse(Console.ReadLine());
+
             // Codes to enter start
             Console.Error.WriteLine("Enter the ending number");
+            int p = int.Parse(Console.ReadLine());
+
+
             // Codes to enter end.
+
+            
         }
     }
 }
