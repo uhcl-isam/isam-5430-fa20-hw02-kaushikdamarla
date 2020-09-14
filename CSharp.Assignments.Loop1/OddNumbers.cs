@@ -19,8 +19,18 @@ namespace CSharp.Assignments.Loop1
             Console.Error.WriteLine("Enter the ending number");
             int p = int.Parse(Console.ReadLine());
 
+            int i;
+
+
 
             // Codes to enter end.
+            for (i=n; i<=p; i++ ) {
+
+                if ( i%2 != 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+            }
 
             
         }
