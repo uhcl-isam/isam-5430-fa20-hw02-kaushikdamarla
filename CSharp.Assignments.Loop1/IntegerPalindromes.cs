@@ -18,7 +18,11 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // enter sentinel inputs
+         
             // then check the palindrome only once.
+
+
+
         }
     }
 }
