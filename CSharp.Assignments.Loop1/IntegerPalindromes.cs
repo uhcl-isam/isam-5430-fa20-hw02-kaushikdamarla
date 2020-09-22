@@ -18,11 +18,24 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // enter sentinel inputs
-         
+
+            int num, temp, revNum = 0, rem;
+            Console.WriteLine("Enter the Number: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            temp = num;
+            while (num > 0)
+            {
+                rem = num % 10;
+                revNum = (revNum * 10) + rem;
+                num = num / 10;
+            }
+            if (revNum == temp)
+                Console.Write(" a Palindrome.");
+            else
+                Console.Write("not a Palindrome");
+
             // then check the palindrome only once.
-
-
-
+            Console.ReadLine();
         }
     }
 }
