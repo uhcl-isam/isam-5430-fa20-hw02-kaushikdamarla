@@ -7,25 +7,46 @@ namespace CSharp.Assignments.Loop1
     public class Logic1
     {
         /// <summary>
-        /// When squirrels get together for a party, they like to have cigars. A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper bound on the number of cigars. Return true if the party with the given values is successful, or false otherwise.
+        /// When squirrels get together for a party, they like to have cigars. A squirrel party is successful 
+        /// when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper 
+        /// bound on the number of cigars. Return true if the party with the given values is successful, or false otherwise.
         /// </summary>
         /// <param name="cigars"></param>
         /// <param name="isWeekend"></param>
         /// <returns></returns>
         public static bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            if (isWeekend && (cigars >= 40))
+            {
+                return true;
+            }
+            else if ((cigars >= 40 && cigars <= 60))
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
-        /// You are driving a little too fast, and a police officer stops you.Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
+        /// You are driving a little too fast, and a police officer stops you.Write code to compute the result, 
+        /// encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. 
+        /// If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. 
+        /// Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
         /// </summary>
         /// <param name="speed"></param>
         /// <param name="birthday"></param>
         /// <returns></returns>
         public static int CaughtSpeeding(int speed, bool birthday)
         {
-            throw new NotImplementedException();
+
+            if (birthday)
+                speed -= 5;
+            else if (speed >= 61 && speed <= 80)
+                return 1;
+            else if (speed >= 81)
+                return 2;
+            return 0;
+
         }
 
         /// <summary>
@@ -36,7 +57,14 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            if (a == 6 | b == 6)
+                return true;
+            else if (a - b == 6 | b - a == 6)
+                return true;
+            else if (a + b == 6 | b + a == 6)
+                return true;
+            return false;
+
         }
 
         /// <summary>
@@ -46,7 +74,11 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool More20(int num)
         {
-            throw new NotImplementedException();
+            int n;
+            n = num % 20;
+            if (n == 1 | n == 2)
+                return true;
+            return false;
         }
 
         /// <summary>
@@ -56,7 +88,10 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool NearTen(int num)
         {
-            throw new NotImplementedException();
+            int n = num % 10;
+            if ((n >= 0 & n < 3) | (n == 8 | n == 9))
+                return true;
+            return false;
         }
 
         /// <summary>
@@ -67,7 +102,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int TeaParty(int tea, int candy)
         {
-            throw new NotImplementedException();
+            if (tea < 5 | candy < 5)
+                return 0;
+            else if ((tea >= candy * 2) | (candy >= tea * 2))
+                return 2;
+            else if (tea >= 5 & candy >= 5)
+                return 1;
+            return 0;
         }
 
         /// <summary>
@@ -78,7 +119,12 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool SquirrelPlay(int temperature, bool isSummer)
         {
-            throw new NotImplementedException();
+            int n = 90;
+            if (isSummer)
+                n = 100;
+            if (temperature >= 60 & temperature <= n)
+                return true;
+            return false;
         }
 
         /// <summary>
