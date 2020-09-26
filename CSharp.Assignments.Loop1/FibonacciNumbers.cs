@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using System;
+using System.Security.Cryptography;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -12,8 +15,22 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            Console.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
+            Console.WriteLine("Enter the number of Fibonacci Sequence of numbers.");
             int end = int.Parse(Console.ReadLine());
+
+            int x = 0, y = 1, z = 0;
+
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+
+            for (; z < end;)
+            {
+                z = x + y;
+                Console.WriteLine(z);
+                x = y;
+                y = z;
+            }
+
 
         }
     }
